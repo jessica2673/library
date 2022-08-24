@@ -63,11 +63,15 @@ function display(book) {
 
         myLibrary.splice(newBook.count, 1);
         grid.removeChild(newBook);
+
+        if(myLibrary.length === 0) {
+            document.getElementById("shelf").style.padding = "0px";
+        }
     });
 }
 
 //Example book
-let JaneEyre = new Book("Jane Eyre", "Charlotte Bronte", 300, true);
+let JaneEyre = new Book("Jane Eyre", "Charlotte Bronte", 300, false);
 addBookToLibrary(JaneEyre);
 display(JaneEyre);
 
@@ -82,6 +86,7 @@ form.addEventListener('submit', e => {
 
     let newBook = new Book(title, author, pages, read);
     addBookToLibrary(newBook);
+    document.getElementById("shelf").style.padding = "20px";
     display(newBook);
 });
 
