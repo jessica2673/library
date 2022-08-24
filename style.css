@@ -1,0 +1,13 @@
+#shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 10px;
+
+}
+
+.newBook {
+    background-color: bisque;
+    box-shadow: 0 4px 8px 0 lightgray;
+    padding: 10px;
+    width: min(fit-content);
+}
